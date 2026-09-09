@@ -282,7 +282,7 @@ export function Footer() {
                     onClick={() => setActiveTab("Treatments")}
                     className="hover:text-ivory transition-colors text-left"
                   >
-                    Children's Dental Care
+                    Children&apos;s Dental Care
                   </button>
                 </li>
               </ul>

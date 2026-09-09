@@ -251,7 +251,7 @@ ${formData.notes.trim() ? `• Additional Notes: ${formData.notes.trim()}` : ""}
                       Braces / Smile Alignment Consultation
                     </option>
                     <option value="Children's Dentistry">
-                      Children's / Pediatric Dental Visit
+                      {"Children's / Pediatric Dental Visit"}
                     </option>
                     <option value="Other Dental Concern">
                       Other Dental Concern
