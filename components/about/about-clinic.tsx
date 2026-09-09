@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck, HeartHandshake, Eye, Sparkles } from "lucide-react";
-import { SectionHeading } from "@/lib/../components/ui/section-heading";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export function AboutClinic() {
   const values = [
