@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-teal: #0B4D46;
+  --primary-teal-dark: #073530;
+  --primary-teal-light: #0F6B62;
+  --accent-champagne: #C5A880;
+  --accent-gold: #D4AF37;
+  --bg-ivory: #FBFBF9;
+  --bg-sage: #F3F7F5;
+  --text-charcoal: #162220;
+  --text-muted: #526360;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-ivory);
+  color: var(--text-charcoal);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #0B4D46;
+  color: #FBFBF9;
+}
+
+/* Custom Refined Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F7F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8DDD3;
+  border-radius: 9999px;
+  border: 2px solid #F3F7F5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4FA691;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Glassmorphism & Subtle Borders */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(11, 77, 70, 0.08);
+}
+
+.glass-card-dark {
+  background: rgba(11, 77, 70, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+/* Interactive Treatment Hover Cards */
+.subtle-border {
+  border: 1px solid rgba(11, 77, 70, 0.08);
+}
+
+.subtle-border-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subtle-border-hover:hover {
+  border-color: rgba(11, 77, 70, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -12px rgba(11, 77, 70, 0.08);
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #0B4D46;
+  outline-offset: 3px;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
